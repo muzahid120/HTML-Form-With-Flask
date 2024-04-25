@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Welcome to our Student marks form</h1>
+
+        <form action="{{url_for('calculate')}}"method="POST">
+            <div>
+<label for="math"> Math:</label>
+<input type="text" name="math_score" id="math" >
+</div><br>
+
+<div>
+    <label for="english">English :</label>
+    <input type="text" name="english_score" id="english">
+    </div><br>
+
+    
+    <div>
+        <label for="science"> Science:</label>
+        <input type="text" name="science_score" id="science">
+        </div><br>
+
+        <div>
+            <label for="programing"> C Programming:</label>
+            <input type="text" name="programing_score" id="programing">
+            </div><br>
+
+            <div>
+                <button type="submit">Calculate</button>
+                </div><br>
+            
+
+
+        </form>
+        {% if score %}
+        <h2>Your average marks is {{ score }}</h2>
+    {% endif %}
+    </body>
+</html>
